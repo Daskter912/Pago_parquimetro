@@ -6,6 +6,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Header from './Componentes/Header';
 import Content_Input from './Componentes/Content_Input';
+import Total_Parquimetro from './Componentes/Total_Parquimetro';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Home>
       <Header></Header>
       <Content_Input></Content_Input>
+      <Total_Parquimetro></Total_Parquimetro>
     </Home>
   )
 }

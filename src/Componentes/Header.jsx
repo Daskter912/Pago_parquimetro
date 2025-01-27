@@ -7,19 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-
-
-
-
-
-
-
-
-
-
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1}}>
     <AppBar color='default' position="absolute" sx={{ height: '100px', justifyContent:'center', alignItems:'center' , borderRadius:'8px'}} >
       <Toolbar variant="dense">
         <Typography variant="h3" color="inherit" component="div">
@@ -27,6 +16,5 @@ export default function Header() {
         </Typography>
       </Toolbar>
     </AppBar>
-  </Box>
   )
 }
