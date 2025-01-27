@@ -1,12 +1,13 @@
-import React from 'react'
-import Header from '../Componentes/Header'
+import { createContext } from 'react'
 import './Home.css'
-import Content_Input from '../Componentes/Content_Input'
 
-export default function Home() {
+const HomeContext = createContext();
+
+const Home = ({children}) =>{
   return (
-    <Header></Header>
-
- 
+    <HomeContext.Provider>
+      {children}
+    </HomeContext.Provider>
   );
-}
+};
+export{Home};
