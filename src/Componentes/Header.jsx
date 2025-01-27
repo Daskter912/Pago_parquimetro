@@ -9,12 +9,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
   return (
-    <AppBar color='default' position="absolute" sx={{ height: '100px', justifyContent:'center', alignItems:'center' , borderRadius:'8px'}} >
+    <Box  sx={{ flexGrow: 1}}  >
+    <AppBar color='default' position="absolute" sx={{ height: '100px', justifyContent:'center', alignItems:'center' }} >
       <Toolbar variant="dense">
-        <Typography variant="h3" color="inherit" component="div">
+        <Typography variant="h2" color="inherit" component="div">
           Cobro Parquimetro
         </Typography>
       </Toolbar>
     </AppBar>
+    </Box>
   )
 }
