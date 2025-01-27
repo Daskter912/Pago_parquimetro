@@ -22,10 +22,10 @@ export default function Total_Parquimetro() {
             direction="row"
             sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
             >
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h7" component="div">
                 Tiempo:
             </Typography>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom variant="h7" component="div">
                 $20 pesos x 1 hora
             </Typography>
             </Stack>
@@ -37,10 +37,10 @@ export default function Total_Parquimetro() {
             direction="row"
             sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
             >
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h7" component="div">
                 Costo total:
             </Typography>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom variant="h7" component="div">
                 $4.50
             </Typography>
             </Stack>
