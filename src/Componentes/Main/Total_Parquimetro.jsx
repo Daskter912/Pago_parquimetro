@@ -14,7 +14,7 @@ import Divider from '@mui/material/Divider';
 
 export default function Total_Parquimetro() {
   return (
-    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px' } }  >
+    <Container maxWidth="sm" sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px' } }  >
     <Card>
         <Box sx={{ p: 2 }}>
             <Stack
