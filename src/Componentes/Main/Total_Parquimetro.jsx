@@ -10,11 +10,14 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
+import './main.css'
+
+
 
 
 export default function Total_Parquimetro() {
   return (
-    <Container maxWidth="sm" sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px" } } className='Total_parquimetro' >
+    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px", boxShadow:3} } className='Total_parquimetro' >
     <Card >
         <Box sx={{ p: 2 }}>
             <Stack
