@@ -28,15 +28,15 @@ function createData(name, calories, fat, carbs, protein) {
 
 export default function Tabla() {
   return (
-    <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3}}>
-      <Table  padding='normal' size='midium' aria-label="simple table"   className='Tabla'>
+    <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3,maxWidth:"650px"  }}>
+      <Table  padding='normal' sx={{ maxWidth:"650px"}} aria-label="simple table"   className='Tabla'>
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Hora de entrada</TableCell>
+            <TableCell align="right">Hora de salida</TableCell>
+            <TableCell align="right">Total</TableCell>
+            <TableCell align="right">Costo por hora</TableCell>
+            <TableCell align="right">Precio total</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
