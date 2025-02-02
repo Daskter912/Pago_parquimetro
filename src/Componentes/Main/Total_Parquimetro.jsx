@@ -33,7 +33,6 @@ export default function Total_Parquimetro() {
             </Typography>
             </Stack>
         </Box>
-        <Divider />
         <Box sx={{ p: 2 }}>
             <Stack
             spacing={4}
