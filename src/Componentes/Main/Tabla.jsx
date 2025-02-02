@@ -7,6 +7,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+
+
+
 function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };
   }
@@ -25,7 +28,7 @@ function createData(name, calories, fat, carbs, protein) {
 export default function Tabla() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 650 }} aria-label="simple table"  className='Tabla'>
         <TableHead>
           <TableRow>
             <TableCell>Dessert (100g serving)</TableCell>

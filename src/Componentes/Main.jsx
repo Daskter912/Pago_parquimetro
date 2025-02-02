@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 const Main = ({children}) => {
     return (
-    <main className='contenido-main' >
+    <main className='main-content' >
         {children}
     </main>
     );

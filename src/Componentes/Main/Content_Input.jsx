@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 
 export default function Content_Input() {
   return (
-    <Container maxWidth="sm" sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px'} } >
+    <Container maxWidth="sm" sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', width:"400px"} } className='Content_input' >
         <TextField
           label="Tiempo de estancia"
           id="outlined-start-adornment"
