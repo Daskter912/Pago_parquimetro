@@ -23,7 +23,8 @@ export default function Total_Parquimetro() {
     const {hora, sethora} = useContext(MainContex);
 
   return (
-    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px", boxShadow:3} } className='Total_parquimetro' >
+    <Box p={2} >
+    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px", boxShadow:3, height:"150px" } } className='Total_parquimetro' >
     <Card >
         <Box sx={{ p: 2 }}>
             <Stack
@@ -56,8 +57,6 @@ export default function Total_Parquimetro() {
         </Box>
     </Card>
     </Container>
-    
-    
-    
+    </Box>
   )
 }

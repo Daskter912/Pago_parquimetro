@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import './main.css'
-
+import { Box } from '@mui/material';
 
 
 
@@ -28,6 +28,8 @@ function createData(name, calories, fat, carbs, protein) {
 
 export default function Tabla() {
   return (
+
+    <Box p={2}>
     <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3,maxWidth:"650px"  }}>
       <Table  padding='normal' sx={{ maxWidth:"650px"}} aria-label="simple table"   className='Tabla'>
         <TableHead>
@@ -57,6 +59,7 @@ export default function Tabla() {
         </TableBody>
       </Table>
     </TableContainer>
-   
+
+    </Box>
   );
 }
