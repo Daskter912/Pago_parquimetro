@@ -1,9 +1,13 @@
 .main-content{
     display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    align-items:center;
-    justify-content:center;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-top: 64px;
+ 
+    
+    flex-grow: 1;
 }
 
 

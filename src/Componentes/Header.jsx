@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 export default function Header() {
   return (
     <Box   className='header' >
-    <AppBar color='transparent' position="absolute" sx={{ height: '70px', justifyContent:'inherit', alignItems:'initial', }} >
+    <AppBar color='transparent' position="fixed" sx={{ height: '70px', justifyContent:'inherit', alignItems:'initial', }} >
       <Toolbar variant="dense">
         <Typography variant="h5" color="inherit" component="div">
           Cobro de Parquimetro

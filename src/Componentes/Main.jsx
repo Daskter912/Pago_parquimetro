@@ -1,12 +1,13 @@
 import React from 'react'
 import './Main/main.css'
+import { Container } from '@mui/material';
 
 
 const Main = ({children}) => {
     return (
-    <main className='main-content' >
+    <Container maxWidth='100vh' className='main-content'>
         {children}
-    </main>
+    </Container>
     );
 };
 
