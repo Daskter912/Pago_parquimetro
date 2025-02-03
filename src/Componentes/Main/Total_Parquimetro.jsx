@@ -11,11 +11,17 @@ import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
 import './main.css'
+import { MainContex } from './MainProvider';
+import { useContext } from 'react';
+
 
 
 
 
 export default function Total_Parquimetro() {
+
+    const {hora, sethora} = useContext(MainContex);
+
   return (
     <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px", boxShadow:3} } className='Total_parquimetro' >
     <Card >
@@ -26,8 +32,9 @@ export default function Total_Parquimetro() {
             sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
             >
             <Typography gutterBottom variant="h7" component="div">
-                Tiempo:
+                Tiempo: {hora}
             </Typography>
+            <Divider></Divider>
             <Typography gutterBottom variant="h7" component="div">
                 $20 pesos x 1 hora
             </Typography>

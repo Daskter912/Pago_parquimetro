@@ -6,8 +6,10 @@ const MainContex = createContext();
 const MainProvider = ({children}) => {
 
     const [hora , sethora] = useState();
+
+
     return (
-    <MainContex.Provider>
+    <MainContex.Provider  value={{ hora, sethora}} >
         {children}
     </MainContex.Provider>
     
