@@ -18,7 +18,7 @@ export default function Total_Parquimetro() {
     const {hora, sethora} = useContext(MainContex);
 
   return (
-    <Box p={2} >
+    <Box p={2} className="main__item">
     <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px", boxShadow:3, height:"190px" } } className='Total_parquimetro' >
     <Card >
         <Box sx={{ p: 2 }}>

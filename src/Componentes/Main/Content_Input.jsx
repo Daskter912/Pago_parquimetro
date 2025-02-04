@@ -22,7 +22,7 @@ export default function Content_Input() {
   return (
 
     
-    <Box  p={2}>
+    <Box  p={2} className="main__item"  >
     <Container  sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', width:"350px", height:"150px", boxShadow:3 } } className='Content_input' >
         <TextField
           label="Tiempo de estancia"

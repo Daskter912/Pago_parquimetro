@@ -29,7 +29,7 @@ function createData(name, calories, fat, carbs, protein) {
 export default function Tabla() {
   return (
 
-    <Box p={2}>
+    <Box p={2}  className="main__item main__item--active" >
     <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3,maxWidth:"650px"  }}>
       <Table  padding='normal' sx={{ maxWidth:"650px"}} aria-label="simple table"   className='Tabla'>
         <TableHead>
