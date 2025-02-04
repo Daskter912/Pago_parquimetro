@@ -57,7 +57,11 @@
 
         position: absolute;
         top: 300px; /* Distancia desde la parte superior */
-        left: 30px; /* Distancia desde la izquierda */
+        left: 45px; /* Distancia desde la izquierda */
+    }
+
+    .card{
+        width: 300px;
     }
     
     .main__item--active{

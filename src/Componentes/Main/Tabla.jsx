@@ -65,9 +65,9 @@ export default function Tabla() {
       <Table  padding='normal' size='medium' aria-label="simple table"   className='Tabla'>
         <TableHead>
           <TableRow>
-            <TableCell align="right">Total de horas</TableCell>
-            <TableCell align="right">Precio</TableCell>
-            <TableCell align="right">Precio total</TableCell>
+            <TableCell align="left">Total de horas</TableCell>
+            <TableCell align="left">Precio</TableCell>
+            <TableCell align="left">Precio total</TableCell>
             <TableCell align="right">Entrada</TableCell>
             <TableCell align="right">Salida</TableCell>
           </TableRow>

@@ -20,12 +20,11 @@ export default function Total_Parquimetro() {
     
 
   return (
-    <Box p={2} className="main__item   main__item--secundari">
-    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', boxShadow:3} } className='Total_parquimetro' >
-    <Card sx={{boxShadow:0}}>
+    <Box sx={{boxShadow:3, borderRadius:3}} className="main__item   main__item--secundari">
+    <Card sx={{boxShadow:0, borderRadius:3   }} className='card' >
        
             <Box p={2} >
-                <Typography gutterBottom variant="h7" component="div">
+                <Typography gutterBottom variant="subtitle2" component="div">
                 Servicio: $20 pesos x 1 hora
             </Typography>
             </Box>
@@ -35,7 +34,7 @@ export default function Total_Parquimetro() {
             direction="row"
             sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
             >
-            <Typography gutterBottom variant="h7" component="div">
+            <Typography gutterBottom variant="subtitle2" component="div">
                 Costo total: 
             </Typography>
             <Typography gutterBottom variant="h7" component="div">
@@ -44,7 +43,6 @@ export default function Total_Parquimetro() {
             </Stack>
         </Box>
     </Card>
-    </Container>
     </Box>
   )
 }
