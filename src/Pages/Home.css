@@ -26,19 +26,18 @@ body, html {
 
 
 
-@media (max-width: 2000px) {
+@media (max-width: 600px) {
   .header {
     flex-shrink: 0; 
-      padding: 10px;
   }
 
   .home-container {
-      padding: 10px;
       flex-grow: 1;
-  overflow-y: auto;
-  display: flex;
-  align-content: center;
-  height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      align-content: center;
+      height: 100vh;
+      margin-top: 70px;
       
   }
 }
