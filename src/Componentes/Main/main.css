@@ -64,7 +64,7 @@
 
         position: absolute;
         top: 500px; /* Distancia desde la parte superior */
-        left: 1px; /* Distancia desde la izquierda */
+        left: 0px; /* Distancia desde la izquierda */
         right: 30;
     
     }

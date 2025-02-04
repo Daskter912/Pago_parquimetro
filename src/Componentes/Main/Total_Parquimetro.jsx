@@ -22,11 +22,11 @@ export default function Total_Parquimetro() {
   return (
     <Box p={2} className="main__item   main__item--secundari">
     <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', boxShadow:3} } className='Total_parquimetro' >
-    <Card >
+    <Card sx={{boxShadow:0}}>
        
             <Box p={2} >
                 <Typography gutterBottom variant="h7" component="div">
-                Precio: $20 pesos x 1 hora
+                Servicio: $20 pesos x 1 hora
             </Typography>
             </Box>
         <Box sx={{ p: 2 }}>

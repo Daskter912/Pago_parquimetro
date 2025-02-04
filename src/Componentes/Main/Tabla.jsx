@@ -34,7 +34,7 @@ export default function Tabla() {
 
   const agregarElemento = () => {
     setServicio((prevServicio) => [...prevServicio, dateTable]);
-    sethora(''); // Limpiar el input después de agregar el elemento
+    sethora(''); 
     setaccion(false);
   };
 
@@ -62,7 +62,7 @@ export default function Tabla() {
 
     <Box p={2}  className="main__item main__item--active" >
     <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3  }}>
-      <Table  padding='normal' sx={{ maxWidth:"650px"}} aria-label="simple table"   className='Tabla'>
+      <Table  padding='normal' size='medium' aria-label="simple table"   className='Tabla'>
         <TableHead>
           <TableRow>
             <TableCell align="right">Total de horas</TableCell>
