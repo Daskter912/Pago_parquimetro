@@ -17,29 +17,29 @@ body, html {
 
 
 .home-container{
-  margin-top: 70px;
-
-  background-color: #f4f4f4;
-  flex-grow: 1; 
-  flex-wrap: wrap;
+  flex-grow: 1;
   overflow-y: auto;
   display: flex;
   align-content: center;
   height: 100vh;
-
 }
 
 
 
-@media (max-width: 1240px) {
+@media (max-width: 2000px) {
   .header {
+    flex-shrink: 0; 
       padding: 10px;
   }
 
   .home-container {
       padding: 10px;
-      flex-grow: 1; /* Permite que el main ocupe el espacio restante */
-      overflow-y: auto; 
+      flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  align-content: center;
+  height: 100vh;
+      
   }
 }
 

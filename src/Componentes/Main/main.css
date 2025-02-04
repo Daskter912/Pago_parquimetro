@@ -1,6 +1,5 @@
 .main-content{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -8,15 +7,13 @@
 }
 
 .main__item{
-    margin: 40px;
+    margin: 20px;
     
 }
 
 
 .main__item--active{
     align-self: flex-end;
-
-
 }
 
 
