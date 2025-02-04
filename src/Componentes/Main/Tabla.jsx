@@ -8,6 +8,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import './main.css'
 import { Box } from '@mui/material';
+import { useEffect } from 'react';
+import { MainContex } from './MainProvider';
+import { useContext } from 'react';
+
 
 
 
@@ -22,15 +26,39 @@ function createData(name, calories, fat, carbs, protein) {
     createData('Cupcake', 305, 3.7, 67, 4.3),
     createData('Gingerbread', 356, 16.0, 49, 3.9),
   ];
+  
+
 
 
 
 
 export default function Tabla() {
+
+  const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular} = useContext(MainContex);
+
+  const agregarElemento = () => {
+    setServicio((prevServicio) => [...prevServicio, calcular]);
+    sethora(''); // Limpiar el input después de agregar el elemento
+    setaccion(false)
+  };
+
+
+  useEffect(() => {
+    if(acion === true){
+   agregarElemento();
+   console.log(calcular);
+   console.log(servicio);
+    }
+  }, [acion]);
+
+  console.log(servicio)
+
+
+
   return (
 
     <Box p={2}  className="main__item main__item--active" >
-    <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3,maxWidth:"650px"  }}>
+    <TableContainer component={Paper} sx={{borderRadius:'5px',boxShadow:3  }}>
       <Table  padding='normal' sx={{ maxWidth:"650px"}} aria-label="simple table"   className='Tabla'>
         <TableHead>
           <TableRow>

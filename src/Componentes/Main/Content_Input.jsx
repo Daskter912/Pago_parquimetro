@@ -12,21 +12,40 @@ import { MainContex } from './MainProvider';
 
 export default function Content_Input() {
 
-  const {hora, sethora} = useContext(MainContex);
+  const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular} = useContext(MainContex);
 
 
   const capturarHora = (evento) => {
-    sethora(evento.target.value);
+    const valor = (evento.target.value);
+    const valorNumerico = parseInt(valor, 10);
+    sethora(valorNumerico);
+    console.log(hora.constructor.name);
+    setcalcular('');
+
   };
+
+  const calCosto = () =>{
+    const calculo = hora * 20;
+    setcalcular(calculo);
+    console.log(calcular);
+    setaccion(true);
+
+  }
+
+  
+
+
 
   return (
 
     
-    <Box  p={2} className="main__item"  >
-    <Container  sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', width:"350px", height:"150px", boxShadow:3 } } className='Content_input' >
+    <Box  p={2} className="main__item  main__item--primari ">
+    <Container  sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', boxShadow:3 } } className='Content_input' >
         <TextField
+        type='number'
           label="Tiempo de estancia"
           id="outlined-start-adornment"
+          value={hora}
           onChange={capturarHora} 
           sx={{ m: 1, width: '25ch' }}
           slotProps={{
@@ -36,9 +55,7 @@ export default function Content_Input() {
           }}
         />
         <Divider></Divider>
-      <Button variant="contained">calcular</Button>
-        
-
+      <Button variant="contained"  onClick={calCosto} >calcular</Button>
     </Container>
     </Box>
   )

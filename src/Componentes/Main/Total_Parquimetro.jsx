@@ -15,23 +15,15 @@ import { useContext } from 'react';
 
 export default function Total_Parquimetro() {
 
-    const {hora, sethora} = useContext(MainContex);
+    const {hora, sethora, servicio, calcular} = useContext(MainContex);
+
+    
 
   return (
-    <Box p={2} className="main__item">
-    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', width:"400px", boxShadow:3, height:"190px" } } className='Total_parquimetro' >
+    <Box p={2} className="main__item   main__item--secundari">
+    <Container sx={{ p:2 ,backgroundColor:'white', borderRadius:'5px', boxShadow:3} } className='Total_parquimetro' >
     <Card >
-        <Box sx={{ p: 2 }}>
-            <Stack
-            spacing={4}
-            direction="row"
-            sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
-            >
-            <Typography gutterBottom variant="h7" component="div">
-                Tiempo: {hora}
-            </Typography>
-            </Stack>
-            </Box>
+       
             <Box p={2} >
                 <Typography gutterBottom variant="h7" component="div">
                 Precio: $20 pesos x 1 hora
@@ -44,10 +36,10 @@ export default function Total_Parquimetro() {
             sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
             >
             <Typography gutterBottom variant="h7" component="div">
-                Costo total:
+                Costo total: 
             </Typography>
             <Typography gutterBottom variant="h7" component="div">
-                $4.50
+            {calcular}
             </Typography>
             </Stack>
         </Box>
