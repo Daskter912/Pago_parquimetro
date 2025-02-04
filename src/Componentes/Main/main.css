@@ -7,26 +7,28 @@
 }
 
 .main__item--primari{
+    width: 400px;
     position: relative;
     position: absolute;
     top: 250px; /* Distancia desde la parte superior */
-    left: 180px; /* Distancia desde la izquierda */
+    left: 280px; /* Distancia desde la izquierda */
     
 }
 
 .main__item--secundari{
     position: relative;
+    width: 400px;
 
     position: absolute;
     top: 450px; /* Distancia desde la parte superior */
-    left: 180px; /* Distancia desde la izquierda */
+    left: 280px; /* Distancia desde la izquierda */
 }
 
 .main__item--active{
     position: relative;
 
     position: absolute;
-    top: 300px; /* Distancia desde la parte superior */
+    top: 250px; /* Distancia desde la parte superior */
     left: 1100px; /* Distancia desde la izquierda */
 
 }
@@ -39,29 +41,33 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 1920px) {
     
     .main__item--primari{
+        width: 300px;
 
         position: absolute;
         top: 90px; /* Distancia desde la parte superior */
-        left: 5px; /* Distancia desde la izquierda */
+        left: 30px; /* Distancia desde la izquierda */
         
     }
     
     .main__item--secundari{
+        width: 300px;
 
         position: absolute;
         top: 300px; /* Distancia desde la parte superior */
-        left: 5px; /* Distancia desde la izquierda */
+        left: 30px; /* Distancia desde la izquierda */
     }
     
     .main__item--active{
 
         position: absolute;
-        top: 550px; /* Distancia desde la parte superior */
-        left: 5px; /* Distancia desde la izquierda */
+        top: 500px; /* Distancia desde la parte superior */
+        left: 1px; /* Distancia desde la izquierda */
+        right: 30;
     
     }
   }
   
+

@@ -13,46 +13,49 @@ import { MainContex } from './MainProvider';
 import { useContext } from 'react';
 
 
-
-
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
-  
-  const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-  ];
-  
-
-
-
-
-
 export default function Tabla() {
 
-  const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular} = useContext(MainContex);
+  const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular,errorMessage, setErrorMessage} = useContext(MainContex);
+
+  const horaEntrada = "8:30 pm"
+  const horaSalida = "9:00 pm"
+  const costoTimepo = "$20"
+
+
+  const dateTable = {
+    costo:calcular,
+    tiempo:hora, 
+    precio:costoTimepo,
+    entrada:horaEntrada,
+    salida:horaSalida,
+
+};
+
 
   const agregarElemento = () => {
-    setServicio((prevServicio) => [...prevServicio, calcular]);
+    setServicio((prevServicio) => [...prevServicio, dateTable]);
     sethora(''); // Limpiar el input después de agregar el elemento
-    setaccion(false)
+    setaccion(false);
   };
+
+
+  const filtro = ()=>{
+    if(!calcular == 0 || null){
+      agregarElemento();
+    }
+    sethora('');
+    setaccion(false);
+  }
 
 
   useEffect(() => {
     if(acion === true){
-   agregarElemento();
-   console.log(calcular);
-   console.log(servicio);
+      filtro();
+      console.log('hola funciona');
     }
   }, [acion]);
 
-  console.log(servicio)
-
+ console.log(calcular)
 
 
   return (
@@ -62,26 +65,25 @@ export default function Tabla() {
       <Table  padding='normal' sx={{ maxWidth:"650px"}} aria-label="simple table"   className='Tabla'>
         <TableHead>
           <TableRow>
-            <TableCell>Hora de entrada</TableCell>
-            <TableCell align="right">Hora de salida</TableCell>
-            <TableCell align="right">Total</TableCell>
-            <TableCell align="right">Costo por hora</TableCell>
+            <TableCell align="right">Total de horas</TableCell>
+            <TableCell align="right">Precio</TableCell>
             <TableCell align="right">Precio total</TableCell>
+            <TableCell align="right">Entrada</TableCell>
+            <TableCell align="right">Salida</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {servicio.map((item, index) => (
             <TableRow
-              key={row.name}
+              key={index}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{item.tiempo} hr</TableCell>
+              <TableCell align="right">{item.precio}</TableCell>
+              <TableCell align="right">${item.costo}</TableCell>
+              <TableCell align="right">{item.entrada}</TableCell>
+              <TableCell align="right">{item.salida}</TableCell>
+
             </TableRow>
           ))}
         </TableBody>

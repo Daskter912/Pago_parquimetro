@@ -6,7 +6,10 @@ import { Container, Divider } from '@mui/material';
 import Button from '@mui/material/Button';
 import './main.css'
 import { MainContex } from './MainProvider';
-
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 
@@ -19,26 +22,21 @@ export default function Content_Input() {
     const valor = (evento.target.value);
     const valorNumerico = parseInt(valor, 10);
     sethora(valorNumerico);
-    console.log(hora.constructor.name);
     setcalcular('');
 
   };
 
   const calCosto = () =>{
+    console.log(hora);
     const calculo = hora * 20;
     setcalcular(calculo);
-    console.log(calcular);
-    setaccion(true);
-
+    setaccion(true)
   }
 
-  
+   console.log(hora);
 
-
-
+    console.log(calcular);
   return (
-
-    
     <Box  p={2} className="main__item  main__item--primari ">
     <Container  sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', boxShadow:3 } } className='Content_input' >
         <TextField
@@ -56,7 +54,7 @@ export default function Content_Input() {
         />
         <Divider></Divider>
       <Button variant="contained"  onClick={calCosto} >calcular</Button>
-    </Container>
+    </Container>    
     </Box>
   )
 }
