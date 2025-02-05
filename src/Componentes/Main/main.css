@@ -20,8 +20,8 @@
     width: 400px;
 
     position: absolute;
-    top: 450px; /* Distancia desde la parte superior */
-    left: 280px; /* Distancia desde la izquierda */
+    top: 550px; /* Distancia desde la parte superior */
+    left: 291px; /* Distancia desde la izquierda */
 }
 
 .main__item--active{
@@ -67,7 +67,7 @@
     .main__item--active{
 
         position: absolute;
-        top: 500px; /* Distancia desde la parte superior */
+        top: 480px; /* Distancia desde la parte superior */
         left: 0px; /* Distancia desde la izquierda */
         right: 30;
     
