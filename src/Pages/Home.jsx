@@ -7,6 +7,7 @@ import { Main } from '../Componentes/Main'
 import Content_Input from '../Componentes/Main/Content_Input'
 import Tabla from '../Componentes/Main/Tabla'
 import './Home.css'
+import Fecha from '../Componentes/Main/Fecha'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <Header></Header>
     <MainProvider>
       <Main>
+        <Fecha></Fecha>
         <Content_Input ></Content_Input>
         <Total_Parquimetro  > </Total_Parquimetro>
         <Tabla></Tabla>

@@ -6,6 +6,18 @@
     flex-grow: 1;
 }
 
+.Fecha{
+    width: 340px;
+    height: 50px;
+    position: absolute;
+    top: 150px; /* Distancia desde la parte superior */
+    left: 880px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .main__item--primari{
     width: 400px;
     position: relative;
@@ -28,8 +40,8 @@
     position: relative;
 
     position: absolute;
-    top: 250px; /* Distancia desde la parte superior */
-    left: 1100px; /* Distancia desde la izquierda */
+    top: 249px; /* Distancia desde la parte superior */
+    left: 1300px; /* Distancia desde la izquierda */
 
 }
 
@@ -41,28 +53,38 @@
 
 
 
-@media (max-width: 1920px) {
+@media (max-width: 900px) {
     
     .main__item--primari{
         width: 300px;
 
         position: absolute;
-        top: 90px; /* Distancia desde la parte superior */
+        top: 150px; /* Distancia desde la parte superior */
         left: 30px; /* Distancia desde la izquierda */
         
+    }
+
+
+    .Fecha{
+        width: 320px;
+        position: relative;
+        position: absolute;
+        top: 90px; /* Distancia desde la parte superior */
+        left: 35px; /
     }
     
     .main__item--secundari{
         width: 300px;
 
         position: absolute;
-        top: 300px; /* Distancia desde la parte superior */
+        top: 350px; /* Distancia desde la parte superior */
         left: 45px; /* Distancia desde la izquierda */
     }
 
     .card{
         width: 300px;
     }
+
     
     .main__item--active{
 
