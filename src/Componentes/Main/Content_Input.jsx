@@ -6,8 +6,7 @@ import { Container, Divider } from '@mui/material';
 import Button from '@mui/material/Button';
 import './main.css'
 import { MainContex } from '../../Contexs/MainProvider';
-import {CreaTicketCtex} from '../../Contexs/useCreaTicket'
-
+import {CreaTicketCtex} from '../../Contexs/UseCreaTicket';
 
 
 

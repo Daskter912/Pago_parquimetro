@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 const CreaTicketCtex = createContext();
 
-const  useCreaTicket = ( {children}) => {
+const  UseCreaTicket = ( {children}) => {
 
 
     const [Gethora , setGethora] = useState('');
@@ -27,5 +27,5 @@ const  useCreaTicket = ( {children}) => {
     );
 };
 
-export{CreaTicketCtex, useCreaTicket};
+export{CreaTicketCtex, UseCreaTicket};
 

@@ -7,14 +7,14 @@ import Tabla from '../Componentes/Main/Tabla'
 import './Home.css'
 import { MainProvider } from '../Contexs/MainProvider'
 import Fecha from '../Componentes/Main/Fecha'
-import { useCreaTicket } from '../Contexs/useCreaTicket'
+import { UseCreaTicket } from '../Contexs/UseCreaTicket'
 
 export default function Home() {
   return (
     
 <div className='home-container'>
   <Header></Header>
-<useCreaTicket>
+  <UseCreaTicket>
     <MainProvider>
       
         <Main>
@@ -26,7 +26,7 @@ export default function Home() {
    
 
       </MainProvider>
-    </useCreaTicket>
+    </UseCreaTicket>
 </div>
   )
 }
