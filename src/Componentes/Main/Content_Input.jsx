@@ -1,22 +1,21 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import { Container, Divider } from '@mui/material';
 import Button from '@mui/material/Button';
 import './main.css'
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import { MainContex } from '../../Contexs/MainProvider';
+import {CreaTicketCtex} from '../../Contexs/useCreaTicket'
+
+
 
 
 
 export default function Content_Input() {
-
+   
+  const {Gethora, setGethora} = useContext(CreaTicketCtex);
   const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular} = useContext(MainContex);
-
 
   const capturarHora = (evento) => {
     const valor = (evento.target.value);
