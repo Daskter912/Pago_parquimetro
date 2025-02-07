@@ -9,9 +9,8 @@ import Paper from '@mui/material/Paper';
 import './main.css'
 import { Box } from '@mui/material';
 import { useEffect } from 'react';
-import { MainContex } from './MainProvider';
 import { useContext } from 'react';
-
+import { MainContex } from '../../Contexs/MainProvider';
 
 export default function Tabla() {
 
