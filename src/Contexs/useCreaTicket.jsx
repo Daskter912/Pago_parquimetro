@@ -21,7 +21,7 @@ const  UseCreaTicket = ( {children}) => {
 
 
     return (
-        <CreaTicketCtex.Provider value={{Gethora, setGethora}}>
+        <CreaTicketCtex.Provider value={{Gethora, setGethora, CapturarHora}}>
             {children}
         </CreaTicketCtex.Provider>
     );

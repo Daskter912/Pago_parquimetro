@@ -6,11 +6,35 @@
     flex-grow: 1;
 }
 
-.Fecha{
+.main__item--creaticket{
+    height: 70px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:220px;
+    left: 300px;
+}
+
+
+.main__item__card{
+    position: absolute;
+    top:320px;
+    left: 291px;
+
+}
+
+.main__item--cardTicket{
+    width: 330px;
+}
+
+
+.CardFecha{
     width: 340px;
     height: 50px;
     position: absolute;
-    top: 150px; /* Distancia desde la parte superior */
+    top: 130px; /* Distancia desde la parte superior */
     left: 880px; 
     display: flex;
     justify-content: center;
@@ -20,24 +44,23 @@
 
 .main__item--primari{
     width: 400px;
-    position: relative;
     position: absolute;
     top: 250px; /* Distancia desde la parte superior */
     left: 280px; /* Distancia desde la izquierda */
     
 }
 
+
+
 .main__item--secundari{
-    position: relative;
     width: 400px;
 
     position: absolute;
-    top: 550px; /* Distancia desde la parte superior */
+    top: 480px; /* Distancia desde la parte superior */
     left: 291px; /* Distancia desde la izquierda */
 }
 
 .main__item--active{
-    position: relative;
 
     position: absolute;
     top: 249px; /* Distancia desde la parte superior */
@@ -49,11 +72,7 @@
 
 
 
-
-
-
-
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     
     .main__item--primari{
         width: 300px;

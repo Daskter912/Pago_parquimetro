@@ -47,6 +47,7 @@ import Button from '@mui/material/Button';
         display: 'flex',
         flexDirection: 'column',
         alignSelf: 'center',
+        
         width: '100%',
         padding: theme.spacing(4),
         gap: theme.spacing(2),

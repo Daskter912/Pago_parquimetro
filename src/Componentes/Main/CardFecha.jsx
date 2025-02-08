@@ -1,15 +1,10 @@
 import React from 'react'
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
 
 
-
-
-
-
-export default function Fecha() {
+export default function CardFecha() {
 
     const [horaPuebla, setHoraPuebla] = useState("");
 
@@ -37,8 +32,8 @@ export default function Fecha() {
     }, []);
 
     return (
-        <Paper  elevation={3} square={false} className='Fecha' >
-            <Typography>{horaPuebla}</Typography>
+        <Paper  elevation={3} square={false} className='CardFecha' >
+            <Typography  color='textPrimary'>{horaPuebla}</Typography>
         </Paper>
     )
 }

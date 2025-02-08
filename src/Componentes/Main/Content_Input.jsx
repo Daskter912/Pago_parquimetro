@@ -12,7 +12,7 @@ import { CreaTicketCtex } from '../../Contexs/UseCreaTicket';
 
 export default function Content_Input() {
    
-  const {Gethora, setGethora} = useContext(CreaTicketCtex);
+  const {Gethora, setGethora, CapturarHora} = useContext(CreaTicketCtex);
   const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular} = useContext(MainContex);
 
   const capturarHora = (evento) => {
@@ -28,6 +28,7 @@ export default function Content_Input() {
     const calculo = hora * 20;
     setcalcular(calculo);
     setaccion(true)
+    console.log(Gethora);
   }
 
    console.log(hora);

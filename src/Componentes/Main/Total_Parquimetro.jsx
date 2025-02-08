@@ -8,41 +8,39 @@ import Divider from '@mui/material/Divider';
 import './main.css'
 import { useContext } from 'react';
 import { MainContex } from '../../Contexs/MainProvider';
-
-
+import CardActionArea from '@mui/material/CardActionArea';
 
 
 
 export default function Total_Parquimetro() {
 
-    const {hora, sethora, servicio, calcular} = useContext(MainContex);
 
-    
 
   return (
-    <Box sx={{boxShadow:3, borderRadius:3}} className="main__item   main__item--secundari">
-    <Card sx={{boxShadow:0, borderRadius:3   }} className='card' >
-       
-            <Box p={2} >
-                <Typography gutterBottom variant="subtitle2" component="div">
+<Box sx={{boxShadow:3, borderRadius:3}} className="main__item   main__item--secundari">
+  <Card sx={{boxShadow:0, borderRadius:3   }} className='card' >
+    <CardActionArea>
+        <Box p={2} >
+            <Typography gutterBottom variant="subtitle2" component="div">
                 Servicio: $20 pesos x 1 hora
             </Typography>
-            </Box>
+        </Box>
         <Box sx={{ p: 2 }}>
             <Stack
             spacing={4}
             direction="row"
             sx={{ justifyContent: 'flex-start', alignItems: 'center' }}
             >
-            <Typography gutterBottom variant="subtitle2" component="div">
+              <Typography gutterBottom variant="subtitle2" component="div">
                 Costo total: 
-            </Typography>
-            <Typography gutterBottom variant="h7" component="div">
-            {calcular}
-            </Typography>
+              </Typography>
+              <Typography gutterBottom variant="h7" component="div">
+              Calcular
+              </Typography>
             </Stack>
         </Box>
-    </Card>
-    </Box>
-  )
-}
+    </CardActionArea>
+  </Card>
+</Box>
+  );
+};
