@@ -2,6 +2,9 @@ import React from 'react'
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useState, useEffect } from 'react';
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
 
 
 export default function CardFecha() {
@@ -32,8 +35,12 @@ export default function CardFecha() {
     }, []);
 
     return (
-        <Paper  elevation={3} square={false} className='CardFecha' >
-            <Typography  color='textPrimary'>{horaPuebla}</Typography>
-        </Paper>
+    <Card sx={{boxShadow:3, borderRadius:1  }}  className='main-item CardFecha' >
+        <CardActionArea>
+            <CardContent>
+                <Typography  color='textPrimary'>{horaPuebla}</Typography>
+            </CardContent>
+        </CardActionArea>
+    </Card>
     )
 }

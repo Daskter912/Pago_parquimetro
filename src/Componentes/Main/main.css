@@ -31,7 +31,7 @@
 
 
 .CardFecha{
-    width: 340px;
+    width: 350px;
     height: 50px;
     position: absolute;
     top: 130px; /* Distancia desde la parte superior */
@@ -63,8 +63,8 @@
 .main__item--active{
 
     position: absolute;
-    top: 249px; /* Distancia desde la parte superior */
-    left: 1300px; /* Distancia desde la izquierda */
+    top: 260px; /* Distancia desde la parte superior */
+    left: 1100px; /* Distancia desde la izquierda */
 
 }
 

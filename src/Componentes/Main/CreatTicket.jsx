@@ -17,7 +17,7 @@ const {Gethora, setGethora, CapturarHora} = useContext(CreaTicketCtex);
 console.log(Gethora);
 
 return (
-    <Box  className='main__item  main__item--creaticket' >
+    <Box  className='main-item  main__item--creaticket' >
         <Paper elevation={4} square={false}  >
             <Button  variant="contained" onClick={CapturarHora} > GENERAR TICKET</Button>
         </Paper>

@@ -9,19 +9,16 @@ import CardContent from '@mui/material/CardContent';
 
 
 
-
-
-
-
-
 export default function CardTicket() {
+
     const {Gethora, setGethora, CapturarHora} = useContext(CreaTicketCtex);
     console.log(Gethora.constructor.name)
 
 
-  return (
+const TickeCret =()=>{
+    return(
     <Box  className='main__item__card'  >
-        <Card sx={{boxShadow:3, borderRadius:3   }}  className=' main__item--cardTicket' >
+        <Card sx={{boxShadow:3, borderRadius:3   }}  className='main-item main__item--cardTicket' >
             <CardActionArea>
                 <CardContent>
                     <Typography  gutterBottom variant='h6' color='textPrimary' >
@@ -35,6 +32,30 @@ export default function CardTicket() {
             </CardActionArea>
         </Card>
     </Box>
+    );
+}
 
+const Bienvenida =()=>{
+
+    return(
+    <Box  className='main__item__card'  >
+        <Card sx={{boxShadow:3, borderRadius:3   }}  className='main-item main__item--cardTicket' >
+            <CardActionArea>
+                <CardContent>
+                    <Typography  gutterBottom variant='h6' color='textPrimary' >
+                        Bienvenido al sistema
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Box>
+    );
+}
+
+
+  return (
+    <>
+    {Gethora ? <TickeCret></TickeCret> : <Bienvenida></Bienvenida> }
+    </>
     );
 };

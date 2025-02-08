@@ -71,7 +71,7 @@ export default function Tabla() {
   };
 
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden' }}   className='main__item--active' >
+    <Paper sx={{  overflow: 'hidden' }} elevation={3}  className='main-item  main__item--active' >
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>

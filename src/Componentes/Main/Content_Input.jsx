@@ -36,7 +36,7 @@ export default function Content_Input() {
     console.log(calcular);
   return (
     <Box  p={2} className="main__item  main__item--primari ">
-    <Container  sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', boxShadow:3 } } className='Content_input' >
+    <Container  sx={{p:2 ,display:'flex',  flexWrap:'nowrap', flexDirection:'column', backgroundColor:'white', borderRadius:'5px', boxShadow:3 } } className='main-item Content_input' >
         <TextField
         type='number'
           label="Tiempo de estancia"
