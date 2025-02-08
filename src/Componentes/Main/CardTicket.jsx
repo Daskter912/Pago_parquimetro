@@ -53,7 +53,7 @@ const Bienvenida =()=>{
 }
 
 
-  return (
+    return (
     <>
     {Gethora ? <TickeCret></TickeCret> : <Bienvenida></Bienvenida> }
     </>
