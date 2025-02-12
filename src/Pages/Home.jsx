@@ -11,13 +11,14 @@ import CreatTicket from '../Componentes/Main/CreatTicket'
 import CardTicket from '../Componentes/Main/CardTicket'
 import Tabla from '../Componentes/Main/Tabla'
 
+
 export default function Home() {
   return (
     
 <div className='home-container'>
   <Header></Header>
   <UseCreaTicket>
-    <MainProvider>   
+      <MainProvider>   
         <Main>
           <CardFecha></CardFecha>
           <CardTicket></CardTicket>

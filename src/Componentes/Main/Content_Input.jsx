@@ -7,10 +7,14 @@ import Button from '@mui/material/Button';
 import './main.css'
 import { MainContex } from '../../Contexs/MainProvider';
 import { CreaTicketCtex } from '../../Contexs/UseCreaTicket';
+import { AuthContex } from '../../Contexs/UseAuth';
 
 
 
 export default function Content_Input() {
+
+  const {IsAuth} = useContext(AuthContex);
+
    
   const {Gethora, setGethora, CapturarHora} = useContext(CreaTicketCtex);
   const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular} = useContext(MainContex);

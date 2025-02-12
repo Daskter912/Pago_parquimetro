@@ -8,6 +8,96 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import React from 'react';
 
+// const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular,errorMessage, setErrorMessage} = useContext(MainContex);
+// const horaEntrada = "8:30 pm"
+// const horaSalida = "9:00 pm"
+// const costoTimepo = "$20"
+// const dateTable = {
+//   costo:calcular,
+//   tiempo:hora, 
+//   precio:costoTimepo,
+//   entrada:horaEntrada,
+//   salida:horaSalida,
+// };
+// const agregarElemento = () => {
+//   setServicio((prevServicio) => [...prevServicio, dateTable]);
+//   sethora(''); 
+//   setaccion(false);
+// };
+
+// const filtro = ()=>{
+//   if(!calcular == 0 || null){
+//     agregarElemento();
+//   }
+//   sethora('');
+//   setaccion(false);
+// }
+// useEffect(() => {
+//   if(acion === true){
+//     filtro();
+//     console.log('hola funciona');
+//   }
+// }, [acion]);
+// console.log(calcular)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const columns = [
   { id: 'name', label: 'Name', minWidth: 170 },
   { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },

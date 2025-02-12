@@ -9,13 +9,10 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
-
-
-
-
-
-
+import { AuthContex } from '../Contexs/UseAuth';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
@@ -65,6 +62,26 @@ import Button from '@mui/material/Button';
 
 
 export default function Login() {
+
+    const {setLoginMatrc, setLoginCont, loginCont, loginMatrc, IsAuth, Auth} = useContext(AuthContex);
+
+
+    const GetMatricula =(e) =>{
+        setLoginMatrc(e.target.value)
+    }
+
+    const GetContr =(e) =>{
+        setLoginCont(e.target.value)
+    }
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if (IsAuth) {
+        navigate("/home"); // Si ya está autenticado, lo mandamos a /home
+      }
+    }, [IsAuth, navigate]);
+
     return (
     <CssBaseline  enableColorScheme >
         <SignInContainer>
@@ -90,40 +107,33 @@ export default function Login() {
                 <FormControl>
                 <FormLabel htmlFor="email">Matricula</FormLabel>
                 <TextField
-                    error={''}
-                    helperText={''}
-                    id="email"
-                    type="email"
-                    name="email"
+                    
                     placeholder="Matricula"
-                    autoComplete="email"
                     autoFocus
                     required
                     fullWidth
                     variant="outlined"
+                    onChange={GetMatricula}
                 />
                 </FormControl>
                 <FormControl>
               <FormLabel htmlFor="password">Contraseña</FormLabel>
               <TextField
-                error={''}
-                helperText={''}
                 name="password"
                 placeholder="••••••"
                 type="password"
-                id="password"
                 autoComplete="current-password"
                 autoFocus
                 required
                 fullWidth
                 variant="outlined"
+                onChange={GetContr}
               />
             </FormControl>
             <Button
-              type="submit"
-              fullWidth
+            sx={{maxWidth:100  }}              
               variant="contained"
-              onClick={''}
+              onClick={Auth}
             >
               Enviar
             </Button>
