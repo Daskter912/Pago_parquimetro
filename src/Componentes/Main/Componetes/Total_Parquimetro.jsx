@@ -5,15 +5,12 @@ import { Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import './main.css'
 import { useContext } from 'react';
-import { MainContex } from '../../Contexs/MainProvider';
 import CardActionArea from '@mui/material/CardActionArea';
 
 
 
 export default function Total_Parquimetro() {
-
 
 
   return (

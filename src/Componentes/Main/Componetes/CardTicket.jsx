@@ -5,8 +5,7 @@ import Typography from '@mui/material/Typography';
 import { useContext } from "react";
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
-import { CreatTick } from '../../Contexs/UseCreTicket';
-
+import { CreatTick } from '../../../Contexs/UseCreTicket';
 
 export default function CardTicket() {
 

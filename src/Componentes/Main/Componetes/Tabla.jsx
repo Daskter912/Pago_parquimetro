@@ -6,7 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import React from 'react';
+import React, { useState } from 'react';
+import { useContext } from 'react';
+import { CreatTick } from '../../../Contexs/UseCreTicket';
 
 // const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular,errorMessage, setErrorMessage} = useContext(MainContex);
 // const horaEntrada = "8:30 pm"
@@ -18,11 +20,6 @@ import React from 'react';
 //   precio:costoTimepo,
 //   entrada:horaEntrada,
 //   salida:horaSalida,
-// };
-// const agregarElemento = () => {
-//   setServicio((prevServicio) => [...prevServicio, dateTable]);
-//   sethora(''); 
-//   setaccion(false);
 // };
 
 // const filtro = ()=>{
@@ -39,57 +36,6 @@ import React from 'react';
 //   }
 // }, [acion]);
 // console.log(calcular)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -154,10 +100,35 @@ const rows = [
   createData('Brazil', 'BR', 210147125, 8515767),
 ];
 
+
+
+
 export default function Tabla() {
+
+  const {Gethora, setGethora, CapturarHora} = useContext(CreatTick);
+
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
+  const [addHora, setAddhora] = useState([]);
+
+  const precio = 20;
+
+
+  // const [diaSemana, diaMes, hora] = Gethora.splip(",").map(item.trim());
+
+  //   const dateTable = {
+  //   tiempo:hora,
+  //   entradaDia: diaMes,
+  //   precio:precio,
+  //   tiempo:hora,
+  //   salida:horaSalida,
+  // };
+
+
+
+
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -167,6 +138,13 @@ export default function Tabla() {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+// const agregarElemento = () => {
+//   setAddhora((prevGethora) => [...prevGethora, ]);
+//   sethora(''); 
+//   setaccion(false);
+// };
+
 
   return (
     <Paper sx={{  overflow: 'hidden' }} elevation={3}  className='main-item  main__item--active' >

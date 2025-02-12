@@ -1,6 +1,6 @@
 import React from 'react'
-import './Main/main.css'
 import { Container } from '@mui/material';
+import '../Main/main.css'
 
 
 const Main = ({children}) => {

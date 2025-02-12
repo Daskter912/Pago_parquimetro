@@ -22,6 +22,8 @@ const UseCreTicket = ({children}) => {
     const fechaHora = new Intl.DateTimeFormat('es-MX', opciones).format(new Date());
     setGethora(fechaHora);
     };
+
+    console.log(Gethora.constructor.name);
     
   return (
     <CreatTick.Provider  value={{Gethora, setGethora, CapturarHora}} >
