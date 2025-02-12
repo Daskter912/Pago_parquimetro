@@ -1,10 +1,11 @@
 import React from "react"; 
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { CreaTicketCtex } from '../../Contexs/UseCreaTicket';
 import { useContext } from "react";
 import './main.css'
 import { Box } from '@mui/material';
+import { CreatTick } from '../../Contexs/UseCreTicket';
+
 
 
 
@@ -12,7 +13,7 @@ import { Box } from '@mui/material';
 
 export default function CreatTicket() {
 
-const {Gethora, setGethora, CapturarHora} = useContext(CreaTicketCtex);
+const {Gethora, setGethora, CapturarHora} = useContext(CreatTick);
 
 console.log(Gethora);
 

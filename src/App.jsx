@@ -8,7 +8,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { UseAuth } from './Contexs/UseAuth';
 import { useContext } from 'react';
 import { AuthContex } from './Contexs/UseAuth';
-import AuthLayout from './Componentes/AuthLayout';
 import ProtectedRoute from './Componentes/ProtectedRoute';
 
 

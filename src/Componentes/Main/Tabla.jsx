@@ -99,26 +99,33 @@ import React from 'react';
 
 
 const columns = [
-  { id: 'name', label: 'Name', minWidth: 170 },
-  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
+  { id: 'Hora de entrada', 
+    label: 'Hora de entrada', 
+    minWidth: 150 },
+  { id: 'Dia', 
+    label: 'Dia', 
+    minWidth: 60 },
   {
-    id: 'population',
-    label: 'Population',
-    minWidth: 170,
+    id: 'Hora salida',
+    label: 'Hora salida',
+    minWidth: 150,
+    align: 'right',
+    format: (value) => value.toLocaleString('en-US'),
+  },
+  { id: 'Dia de salida', 
+    label: 'Dia de salida', 
+    minWidth: 150 },
+  {
+    id: 'Total de horas',
+    label: 'Total de horas',
+    minWidth: 150,
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
   },
   {
-    id: 'size',
-    label: 'Size\u00a0(km\u00b2)',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
+    id: 'Costo total',
+    label: 'Costo total',
+    minWidth: 150,
     align: 'right',
     format: (value) => value.toFixed(2),
   },
@@ -148,6 +155,7 @@ const rows = [
 ];
 
 export default function Tabla() {
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 

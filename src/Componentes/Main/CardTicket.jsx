@@ -3,15 +3,14 @@ import { Box } from '@mui/material';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { useContext } from "react";
-import { CreaTicketCtex } from '../../Contexs/UseCreaTicket';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
-
+import { CreatTick } from '../../Contexs/UseCreTicket';
 
 
 export default function CardTicket() {
 
-    const {Gethora, setGethora, CapturarHora} = useContext(CreaTicketCtex);
+    const {Gethora, setGethora, CapturarHora} = useContext(CreatTick);
     console.log(Gethora.constructor.name)
 
 

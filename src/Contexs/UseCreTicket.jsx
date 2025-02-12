@@ -1,13 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React from 'react'
+import { createContext } from 'react'
+import { useState } from 'react'
 
-const CreaTicketCtex = createContext();
+const CreatTick = createContext();
 
-const  UseCreaTicket = ( {children}) => {
 
+
+const UseCreTicket = ({children}) => {
 
     const [Gethora , setGethora] = useState('');
 
-    // Función para actualizar la hora
+
+        // Función para actualizar la hora
     function CapturarHora() {
     const opciones = { 
             weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', 
@@ -18,14 +22,12 @@ const  UseCreaTicket = ( {children}) => {
     const fechaHora = new Intl.DateTimeFormat('es-MX', opciones).format(new Date());
     setGethora(fechaHora);
     };
-
-
-    return (
-        <CreaTicketCtex.Provider value={{Gethora, setGethora, CapturarHora}}>
-            {children}
-        </CreaTicketCtex.Provider>
-    );
-};
-
-export{CreaTicketCtex, UseCreaTicket};
-
+    
+  return (
+    <CreatTick.Provider  value={{Gethora, setGethora, CapturarHora}} >
+        {children}
+    </CreatTick.Provider>
+    
+  )
+}
+export{UseCreTicket, CreatTick};
