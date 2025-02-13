@@ -77,9 +77,9 @@ export default function Login() {
     const navigate = useNavigate();
 
     useEffect(() => {
-      if (IsAuth) {
+        if (IsAuth) {
         navigate("/home"); // Si ya está autenticado, lo mandamos a /home
-      }
+    }
     }, [IsAuth, navigate]);
 
     return (
@@ -117,8 +117,8 @@ export default function Login() {
                 />
                 </FormControl>
                 <FormControl>
-              <FormLabel htmlFor="password">Contraseña</FormLabel>
-              <TextField
+                <FormLabel htmlFor="password">Contraseña</FormLabel>
+                <TextField
                 name="password"
                 placeholder="••••••"
                 type="password"
@@ -128,14 +128,14 @@ export default function Login() {
                 fullWidth
                 variant="outlined"
                 onChange={GetContr}
-              />
+                />
             </FormControl>
             <Button
             sx={{maxWidth:100  }}              
-              variant="contained"
-              onClick={Auth}
+            variant="contained"
+            onClick={Auth}
             >
-              Enviar
+            Enviar
             </Button>
             </Box>
             </Card>

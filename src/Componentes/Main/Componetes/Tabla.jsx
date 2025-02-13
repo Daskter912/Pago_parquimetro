@@ -9,103 +9,13 @@ import TableRow from '@mui/material/TableRow';
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { CreatTick } from '../../../Contexs/UseCreTicket';
-
-// const {hora, sethora, servicio, setServicio, setaccion, acion, calcular, setcalcular,errorMessage, setErrorMessage} = useContext(MainContex);
-// const horaEntrada = "8:30 pm"
-// const horaSalida = "9:00 pm"
-// const costoTimepo = "$20"
-// const dateTable = {
-//   costo:calcular,
-//   tiempo:hora, 
-//   precio:costoTimepo,
-//   entrada:horaEntrada,
-//   salida:horaSalida,
-// };
-
-// const filtro = ()=>{
-//   if(!calcular == 0 || null){
-//     agregarElemento();
-//   }
-//   sethora('');
-//   setaccion(false);
-// }
-// useEffect(() => {
-//   if(acion === true){
-//     filtro();
-//     console.log('hola funciona');
-//   }
-// }, [acion]);
-// console.log(calcular)
-
-
-
-
-
-
-
-
-const columns = [
-  { id: 'Hora de entrada', 
-    label: 'Hora de entrada', 
-    minWidth: 150 },
-  { id: 'Dia', 
-    label: 'Dia', 
-    minWidth: 60 },
-  {
-    id: 'Hora salida',
-    label: 'Hora salida',
-    minWidth: 150,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  { id: 'Dia de salida', 
-    label: 'Dia de salida', 
-    minWidth: 150 },
-  {
-    id: 'Total de horas',
-    label: 'Total de horas',
-    minWidth: 150,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'Costo total',
-    label: 'Costo total',
-    minWidth: 150,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
-];
-
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
-}
-
-const rows = [
-  createData('India', 'IN', 1324171354, 3287263),
-  createData('China', 'CN', 1403500365, 9596961),
-  createData('Italy', 'IT', 60483973, 301340),
-  createData('United States', 'US', 327167434, 9833520),
-  createData('Canada', 'CA', 37602103, 9984670),
-  createData('Australia', 'AU', 25475400, 7692024),
-  createData('Germany', 'DE', 83019200, 357578),
-  createData('Ireland', 'IE', 4857000, 70273),
-  createData('Mexico', 'MX', 126577691, 1972550),
-  createData('Japan', 'JP', 126317000, 377973),
-  createData('France', 'FR', 67022000, 640679),
-  createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Russia', 'RU', 146793744, 17098246),
-  createData('Nigeria', 'NG', 200962417, 923768),
-  createData('Brazil', 'BR', 210147125, 8515767),
-];
-
+import { useEffect } from 'react';
 
 
 
 export default function Tabla() {
 
-  const {Gethora, setGethora, CapturarHora} = useContext(CreatTick);
+  const {Gethora, setGethora, CapturarHora, accion , setAccion} = useContext(CreatTick);
 
 
   const [page, setPage] = React.useState(0);
@@ -114,20 +24,22 @@ export default function Tabla() {
   const [addHora, setAddhora] = useState([]);
 
   const precio = 20;
+  const horaSalida = "11:23:21";
+  const diaSalida ="25 de febrero 2025";
+  const totalHoras = 23;
+  
 
 
-  // const [diaSemana, diaMes, hora] = Gethora.splip(",").map(item.trim());
+  const [diaSemana, diaMes, hora] = Gethora.split(",").map(item => item.trim());
 
-  //   const dateTable = {
-  //   tiempo:hora,
-  //   entradaDia: diaMes,
-  //   precio:precio,
-  //   tiempo:hora,
-  //   salida:horaSalida,
-  // };
-
-
-
+    const dateTable = {
+    tiempo:hora,
+    entradaDia: diaMes,
+    precio:precio,
+    tiempoSalida:horaSalida,
+    salidaDia:diaSalida,
+    totalHora:totalHoras
+  };
 
 
   const handleChangePage = (event, newPage) => {
@@ -139,12 +51,19 @@ export default function Tabla() {
     setPage(0);
   };
 
-// const agregarElemento = () => {
-//   setAddhora((prevGethora) => [...prevGethora, ]);
-//   sethora(''); 
-//   setaccion(false);
-// };
+const AgregarElemento = () => {
+  setAddhora((prevGethora) => [...prevGethora,dateTable ]);
+};
 
+
+useEffect(() => {
+  if( accion === true){
+        AgregarElemento();
+        setAccion(false);
+  }
+  }, [accion]);
+
+  console.log(addHora);
 
   return (
     <Paper sx={{  overflow: 'hidden' }} elevation={3}  className='main-item  main__item--active' >
@@ -152,39 +71,42 @@ export default function Tabla() {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
+            <TableCell>Hora de entrada</TableCell>
+            <TableCell align="left">Dia y año</TableCell>
+            <TableCell align="right">Hora de salida</TableCell>
+            <TableCell align="right">Dia y año salida</TableCell>
+            <TableCell align="right">Total de horas</TableCell>
+            <TableCell align="right">Costo total</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => {
-                return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {columns.map((column) => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === 'number'
-                            ? column.format(value)
-                            : value}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                );
-              })}
-          </TableBody>
+          {addHora.map((addHoras) => (
+            <TableRow
+              key={addHoras.name}
+              hover role="checkbox" tabIndex={-1}
+            >
+              <TableCell component="th" scope="row">
+                {addHoras.tiempo}
+              </TableCell>
+              <TableCell align="right">{addHoras.entradaDia}</TableCell>
+              <TableCell align="right">{addHoras.tiempoSalida}</TableCell>
+              <TableCell align="right">{addHoras.salidaDia}</TableCell>
+              <TableCell align="right">{addHoras.totalHora}</TableCell>
+              <TableCell align="right">${addHoras.precio}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
         </Table>
       </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[10, 25, 100]}
+        component="div"
+        count={addHora.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
     </Paper>
   );
 }
