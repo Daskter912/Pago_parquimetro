@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import { useContext } from 'react';
 import { CreatTick } from '../../../Contexs/UseCreTicket';
 import { useEffect } from 'react';
+import Button from '@mui/material/Button';
 
 
 
@@ -51,19 +52,23 @@ export default function Tabla() {
     setPage(0);
   };
 
-const AgregarElemento = () => {
+  const AgregarElemento = () => {
   setAddhora((prevGethora) => [...prevGethora,dateTable ]);
-};
+  };
 
 
 useEffect(() => {
   if( accion === true){
-        AgregarElemento();
-        setAccion(false);
+      AgregarElemento();
+      setAccion(false);
+      // Ejecuta la función después de 3 segundos (3000 ms)
+      setTimeout(() => {
+          setGethora('')
+        }, 1500);
   }
   }, [accion]);
 
-  console.log(addHora);
+
 
   return (
     <Paper sx={{  overflow: 'hidden' }} elevation={3}  className='main-item  main__item--active' >
@@ -72,11 +77,12 @@ useEffect(() => {
           <TableHead>
             <TableRow>
             <TableCell>Hora de entrada</TableCell>
-            <TableCell align="left">Dia y año</TableCell>
-            <TableCell align="right">Hora de salida</TableCell>
-            <TableCell align="right">Dia y año salida</TableCell>
-            <TableCell align="right">Total de horas</TableCell>
+            <TableCell align="left">Fecha de entrada</TableCell>
+            <TableCell align="left">Hora de salida</TableCell>
+            <TableCell align="left">Fecha de salida</TableCell>
+            <TableCell align="left">Total de horas</TableCell>
             <TableCell align="right">Costo total</TableCell>
+            <TableCell align="left">Cobro</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -93,6 +99,7 @@ useEffect(() => {
               <TableCell align="right">{addHoras.salidaDia}</TableCell>
               <TableCell align="right">{addHoras.totalHora}</TableCell>
               <TableCell align="right">${addHoras.precio}</TableCell>
+              <TableCell align="right"><Button variant="contained" >Cobro de servicio</Button></TableCell>
             </TableRow>
           ))}
         </TableBody>

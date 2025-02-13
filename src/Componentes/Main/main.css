@@ -6,8 +6,21 @@
     flex-grow: 1;
 }
 
+.CardFecha{
+    width: 360px;
+    height: 50px;
+    position: absolute;
+    top: 130px; /* Distancia desde la parte superior */
+    left: 980px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
 .main__item--creaticket{
-    height: 70px;
+    height: 250px;
     width: 200px;
     display: flex;
     align-items: center;
@@ -20,7 +33,7 @@
 
 .main__item__card{
     position: absolute;
-    top:320px;
+    top:450px;
     left: 291px;
 
 }
@@ -30,41 +43,18 @@
 }
 
 
-.CardFecha{
-    width: 360px;
-    height: 50px;
-    position: absolute;
-    top: 130px; /* Distancia desde la parte superior */
-    left: 880px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.main__item--primari{
-    width: 400px;
-    position: absolute;
-    top: 250px; /* Distancia desde la parte superior */
-    left: 280px; /* Distancia desde la izquierda */
-    
-}
-
-
-
 .main__item--secundari{
     width: 400px;
-
     position: absolute;
-    top: 480px; /* Distancia desde la parte superior */
+    top: 630px; /* Distancia desde la parte superior */
     left: 291px; /* Distancia desde la izquierda */
 }
 
 .main__item--active{
 
     position: absolute;
-    top: 260px; /* Distancia desde la parte superior */
-    left: 1100px; /* Distancia desde la izquierda */
+    top: 340px; /* Distancia desde la parte superior */
+    left: 1300px; /* Distancia desde la izquierda */
 
 }
 

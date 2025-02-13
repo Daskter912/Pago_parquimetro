@@ -7,10 +7,15 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import { CreatTick } from '../../../Contexs/UseCreTicket';
 
+
 export default function CardTicket() {
 
     const {Gethora, setGethora, CapturarHora} = useContext(CreatTick);
     console.log(Gethora.constructor.name)
+
+
+
+  
 
 
 const TickeCret =()=>{

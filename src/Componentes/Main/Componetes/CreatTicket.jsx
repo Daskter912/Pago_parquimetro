@@ -8,7 +8,6 @@ import { CreatTick } from "../../../Contexs/UseCreTicket";
 
 
 
-
 export default function CreatTicket() {
 
 const {Gethora, setGethora, CapturarHora} = useContext(CreatTick);
